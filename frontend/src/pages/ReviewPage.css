@@ -1,0 +1,158 @@
+/* Custom styles for the ReviewPage */
+
+/* Ensure filter dropdown menus appear in correct position and above other content */
+.ant-select-dropdown {
+  z-index: 1060 !important;
+}
+
+/* Force dropdowns to close when clicked outside */
+.ant-select-dropdown-hidden {
+  display: none !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* Fix pagination styling */
+.ant-pagination {
+  display: flex !important;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
+}
+
+.ant-pagination-item {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  margin: 0 2px;
+}
+
+/* Improved filter UI */
+.filter-card {
+  border-radius: 8px;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  margin-bottom: 16px;
+  overflow: visible !important;
+  padding: 10px;
+}
+
+.filter-row {
+  margin: 0 !important;
+}
+
+/* Compact filters layout */
+.compact-filters {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .compact-filters {
+    flex-wrap: wrap;
+  }
+  
+  .compact-filters .ant-col {
+    flex: 0 0 100%;
+    margin-bottom: 8px;
+  }
+}
+
+.filter-item {
+  padding: 0 8px;
+}
+
+.filter-label {
+  font-weight: 500;
+  margin-bottom: 4px;
+  color: #4b5563;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+/* Question and Answer Display */
+.whitespace-pre-line {
+  white-space: pre-line !important;
+}
+
+h4.ant-typography.whitespace-pre-line {
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.ant-typography {
+  word-break: break-word;
+}
+
+/* Filter dropdown enhancements */
+.filter-dropdown {
+  padding: 8px 0;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 1px solid #d1d5db;
+}
+
+.filter-dropdown .ant-select-item {
+  padding: 6px 12px;
+  transition: background-color 0.2s;
+}
+
+.filter-dropdown .ant-select-item-option-active {
+  background-color: #e5e7eb;
+}
+
+.filter-dropdown .ant-select-item-option-selected {
+  background-color: #dbeafe;
+  font-weight: 500;
+}
+
+/* Ensure select dropdown containers position correctly */
+.ant-select {
+  width: 100%;
+}
+
+.ant-select-selector {
+  background-color: white !important;
+  border-radius: 6px !important;
+  border: 1px solid #d1d5db !important;
+  padding: 4px 11px !important;
+  cursor: pointer !important;
+  height: 32px !important;
+}
+
+.ant-select-focused .ant-select-selector {
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1) !important;
+}
+
+/* Ensure Clear Filters button is visible and prominent */
+button.ant-btn[type="primary"] {
+  background-color: #3b82f6 !important;
+  border-color: #3b82f6 !important;
+}
+
+button.ant-btn[type="primary"]:hover,
+button.ant-btn[type="primary"]:focus {
+  background-color: #2563eb !important;
+  border-color: #2563eb !important;
+}
+
+button.ant-btn[type="primary"]:disabled {
+  background-color: #e5e7eb !important;
+  border-color: #d1d5db !important;
+  color: #9ca3af !important;
+}
+
+/* Show/Hide Answer button styling */
+.ant-btn-primary.bg-blue-500 {
+  background-color: #3b82f6;
+  border-color: #3b82f6;
+}
+
+.ant-btn-primary.bg-blue-500:hover {
+  background-color: #2563eb;
+  border-color: #2563eb;
+} 

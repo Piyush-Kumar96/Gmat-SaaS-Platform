@@ -1,0 +1,171 @@
+/* Common styles for all question cards */
+.rc-question-card,
+.cr-question-card,
+.ds-question-card,
+.ps-question-card {
+  margin-bottom: 2rem;
+}
+
+/* Reading Comprehension specific styles */
+.rc-question-card .passage-column {
+  background-color: #f9fafb;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  height: 100%;
+}
+
+/* Mobile tab navigation for RC questions */
+.rc-tabs {
+  display: flex;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 1rem;
+}
+
+.rc-tab {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.rc-tab.active {
+  border-bottom: 2px solid #3b82f6;
+  font-weight: 600;
+}
+
+/* Critical Reasoning specific styles */
+.cr-question-card .argument-section {
+  background-color: #f3f4f6;
+  border-left: 4px solid #3b82f6;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+}
+
+/* Data Sufficiency specific styles */
+.ds-question-card .statement {
+  background-color: #eff6ff;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.ds-info-box {
+  background-color: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+/* Problem Solving specific styles */
+.ps-question-card .math-expression {
+  margin: 1rem 0;
+}
+
+/* KaTeX styling overrides */
+.katex {
+  font-size: 1.1em;
+}
+
+.katex-display {
+  margin: 1.5rem 0;
+}
+
+/* ============================================ */
+/* Data Insights Question Card Styles          */
+/* ============================================ */
+
+/* MSR Question Card */
+.msr-question-card {
+  margin-bottom: 2rem;
+}
+
+.msr-question-card .msr-source-tabs .ant-tabs-nav {
+  margin-bottom: 0;
+  background-color: #f9fafb;
+}
+
+.msr-question-card .msr-source-tabs .ant-tabs-tab {
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+.msr-question-card .msr-source-tabs .ant-tabs-tab-active {
+  background-color: #fff;
+}
+
+.msr-question-card .msr-source-tabs .ant-tabs-content {
+  padding: 0;
+}
+
+/* TPA Question Card */
+.tpa-question-card {
+  margin-bottom: 2rem;
+}
+
+.tpa-question-card .tpa-table {
+  border-collapse: collapse;
+}
+
+.tpa-question-card .tpa-table td,
+.tpa-question-card .tpa-table th {
+  border: 1px solid #e5e7eb;
+  padding: 12px;
+}
+
+.tpa-question-card .tpa-table thead {
+  background-color: #f3f4f6;
+}
+
+.tpa-question-card .tpa-table tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+/* GT Question Card */
+.gt-question-card {
+  margin-bottom: 2rem;
+}
+
+.gt-question-card .gt-data-table table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 14px;
+}
+
+.gt-question-card .gt-data-table td,
+.gt-question-card .gt-data-table th {
+  border: 1px solid #e5e7eb;
+  padding: 10px 12px;
+  text-align: left;
+}
+
+.gt-question-card .gt-data-table thead {
+  background-color: #f3f4f6;
+  font-weight: 600;
+}
+
+.gt-question-card .gt-data-table tbody tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+/* Common DI styles */
+.msr-question-card img,
+.tpa-question-card img,
+.gt-question-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Responsive adjustments for DI cards */
+@media (max-width: 1024px) {
+  .msr-question-card .grid-cols-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .msr-question-card > .grid > div:first-child {
+    max-height: 400px;
+    overflow-y: auto;
+  }
+} 

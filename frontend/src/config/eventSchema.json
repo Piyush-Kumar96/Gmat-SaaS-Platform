@@ -1,0 +1,274 @@
+[
+  {
+    "event": "user_signed_up",
+    "description": "Fired when a user completes the registration process",
+    "trigger": "User submits registration form successfully",
+    "properties": [
+      {
+        "name": "userId",
+        "type": "string",
+        "required": true,
+        "description": "Unique identifier for the user"
+      },
+      {
+        "name": "email",
+        "type": "string",
+        "required": true,
+        "description": "User's email address"
+      },
+      {
+        "name": "registrationMethod",
+        "type": "string",
+        "required": false,
+        "description": "Method used for registration (email, google, etc.)"
+      },
+      {
+        "name": "timestamp",
+        "type": "string",
+        "required": false,
+        "description": "ISO timestamp when event occurred"
+      }
+    ]
+  },
+  {
+    "event": "user_logged_in",
+    "description": "Fired when a user successfully logs into the platform",
+    "trigger": "User submits login form with valid credentials",
+    "properties": [
+      {
+        "name": "userId",
+        "type": "string",
+        "required": true,
+        "description": "Unique identifier for the user"
+      },
+      {
+        "name": "loginMethod",
+        "type": "string",
+        "required": false,
+        "description": "Method used for login (email, google, etc.)"
+      },
+      {
+        "name": "timestamp",
+        "type": "string",
+        "required": false,
+        "description": "ISO timestamp when event occurred"
+      }
+    ]
+  },
+  {
+    "event": "quiz_started",
+    "description": "Fired when a user starts a new quiz session",
+    "trigger": "User clicks 'Start Quiz' button",
+    "properties": [
+      {
+        "name": "quizId",
+        "type": "string",
+        "required": true,
+        "description": "Unique identifier for the quiz session"
+      },
+      {
+        "name": "count",
+        "type": "number",
+        "required": true,
+        "description": "Number of questions in the quiz"
+      },
+      {
+        "name": "timeLimit",
+        "type": "number",
+        "required": true,
+        "description": "Time limit for the quiz in minutes"
+      },
+      {
+        "name": "category",
+        "type": "string",
+        "required": false,
+        "description": "Quiz category (Verbal, Quantitative, Data Insights)"
+      },
+      {
+        "name": "difficulty",
+        "type": "string",
+        "required": false,
+        "description": "Quiz difficulty level"
+      },
+      {
+        "name": "timestamp",
+        "type": "string",
+        "required": false,
+        "description": "ISO timestamp when event occurred"
+      }
+    ]
+  },
+  {
+    "event": "question_answered",
+    "description": "Fired when a user selects an answer for a question",
+    "trigger": "User selects an answer option and moves to next question",
+    "properties": [
+      {
+        "name": "questionId",
+        "type": "string",
+        "required": true,
+        "description": "Unique identifier for the question"
+      },
+      {
+        "name": "correct",
+        "type": "boolean",
+        "required": true,
+        "description": "Whether the selected answer was correct"
+      },
+      {
+        "name": "timeTaken",
+        "type": "number",
+        "required": true,
+        "description": "Time taken to answer the question in seconds"
+      },
+      {
+        "name": "questionType",
+        "type": "string",
+        "required": false,
+        "description": "Type of question (Reading Comprehension, Critical Reasoning, etc.)"
+      },
+      {
+        "name": "category",
+        "type": "string",
+        "required": false,
+        "description": "Question category"
+      },
+      {
+        "name": "difficulty",
+        "type": "number",
+        "required": false,
+        "description": "Question difficulty level (1-5)"
+      },
+      {
+        "name": "timestamp",
+        "type": "string",
+        "required": false,
+        "description": "ISO timestamp when event occurred"
+      }
+    ]
+  },
+  {
+    "event": "question_flagged",
+    "description": "Fired when a user flags a question for review",
+    "trigger": "User clicks 'Flag for Review' button",
+    "properties": [
+      {
+        "name": "questionId",
+        "type": "string",
+        "required": true,
+        "description": "Unique identifier for the question"
+      },
+      {
+        "name": "quizId",
+        "type": "string",
+        "required": false,
+        "description": "Unique identifier for the quiz session"
+      },
+      {
+        "name": "questionType",
+        "type": "string",
+        "required": false,
+        "description": "Type of question"
+      },
+      {
+        "name": "timestamp",
+        "type": "string",
+        "required": false,
+        "description": "ISO timestamp when event occurred"
+      }
+    ]
+  },
+  {
+    "event": "quiz_completed",
+    "description": "Fired when a user completes a quiz (submits or time runs out)",
+    "trigger": "User clicks 'Submit Quiz' or quiz timer expires",
+    "properties": [
+      {
+        "name": "quizId",
+        "type": "string",
+        "required": true,
+        "description": "Unique identifier for the quiz session"
+      },
+      {
+        "name": "totalCorrect",
+        "type": "number",
+        "required": true,
+        "description": "Number of questions answered correctly"
+      },
+      {
+        "name": "totalTime",
+        "type": "number",
+        "required": true,
+        "description": "Total time spent on quiz in seconds"
+      },
+      {
+        "name": "totalQuestions",
+        "type": "number",
+        "required": false,
+        "description": "Total number of questions in the quiz"
+      },
+      {
+        "name": "score",
+        "type": "number",
+        "required": false,
+        "description": "Final quiz score/percentage"
+      },
+      {
+        "name": "category",
+        "type": "string",
+        "required": false,
+        "description": "Quiz category"
+      },
+      {
+        "name": "accuracy",
+        "type": "number",
+        "required": false,
+        "description": "Calculated accuracy percentage (auto-calculated)"
+      },
+      {
+        "name": "timestamp",
+        "type": "string",
+        "required": false,
+        "description": "ISO timestamp when event occurred"
+      }
+    ]
+  },
+  {
+    "event": "page_view",
+    "description": "Fired when a user navigates to a different page",
+    "trigger": "User navigates to any page in the application",
+    "properties": [
+      {
+        "name": "page_name",
+        "type": "string",
+        "required": true,
+        "description": "Name of the page being viewed"
+      },
+      {
+        "name": "userId",
+        "type": "string",
+        "required": false,
+        "description": "Unique identifier for the user (if logged in)"
+      },
+      {
+        "name": "timestamp",
+        "type": "string",
+        "required": false,
+        "description": "ISO timestamp when event occurred"
+      }
+    ]
+  },
+  {
+    "event": "user_logged_out",
+    "description": "Fired when a user logs out of the platform",
+    "trigger": "User clicks logout button or session expires",
+    "properties": [
+      {
+        "name": "timestamp",
+        "type": "string",
+        "required": false,
+        "description": "ISO timestamp when event occurred"
+      }
+    ]
+  }
+] 

@@ -1,0 +1,66 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build outputs
+build/
+dist/
+coverage/
+
+# Environment / secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+*.cert
+*.key
+
+# Editor / OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+.cursorignore
+.claude/
+
+# Project-specific data we never want public
+mongo_backup/
+mongo_backup.zip
+backend/mydatabase_backup/
+backend/uploads/
+backend/pdfs/
+backend/output/
+backend/exports/
+backend/materials/
+backend/venv/
+backend/ai_answers.json
+backend/incomplete_options_report.*
+exports/
+materials/
+*.bson
+*.xlsx
+*.zip
+*.pdf
+
+# Scraped HTML (kept locally for reference, never tracked)
+*.html
+!frontend/public/index.html
+
+# Archived scraping pipeline (kept locally only)
+_archive/
+
+# Misc
+playground-1.mongodb.js
+check_excel.ts
+*.bak
