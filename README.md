@@ -32,8 +32,8 @@ See `context/OVERVIEW.md` and `CLAUDE.md` for a deeper tour of the codebase.
 ## Setup
 
 ```bash
-git clone https://github.com/Piyush-Kumar96/gmat-saas-platform.git
-cd gmat-saas-platform
+git clone https://github.com/Piyush-Kumar96/Gmat-SaaS-Platform.git
+cd Gmat-SaaS-Platform
 ```
 
 ### Backend
