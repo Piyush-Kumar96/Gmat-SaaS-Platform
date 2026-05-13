@@ -89,7 +89,7 @@ This repository ships **no question content**. The data layer is empty after a f
 - Admin-only Question Bank with v3 schema supporting Data Insights (DI) sub-types: Two-Part Analysis, Multi-Source Reasoning, Graphics Interpretation, Table Analysis, Data Sufficiency
 - Manual + Razorpay-mediated payment flows with admin approval queue
 - Mixpanel event tracking across the quiz lifecycle (`quiz_started`, `question_answered`, `quiz_completed`, etc.)
-- Question quality validator (`QA_validator`) — deterministic gate for ingest pipelines
+- Question quality validator — deterministic gate for ingest pipelines
 
 ## License
 

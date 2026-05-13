@@ -314,13 +314,13 @@ validationStatus:
   'unfixable'       → triage: source quality too poor, drop it
 ```
 
-Quiz routes should serve only `validationStatus ∈ {'perfect', 'fixed'}` to end users (see `PROJECT_PLAN_2026.md` Phase 2).
+Quiz routes should serve only `validationStatus ∈ {'perfect', 'fixed'}` to end users.
 
 ---
 
 ## Open issues / debt
 
-1. **`DI-GT` with Yes/No table is misshapen in current data** — extractor stuffs N statements into A–E options, leaving D/E empty. The fix is to migrate to the `subQuestions[yes_no_table]` shape above. See `QUESTION_SOURCING.md` for the migration plan.
+1. **`DI-GT` with Yes/No table is misshapen in current data** — extractor stuffs N statements into A–E options, leaving D/E empty. The fix is to migrate to the `subQuestions[yes_no_table]` shape above.
 2. **`DI-GT` dropdown fill-in is unrepresented** — neither extractor nor `GTQuestionCard` handles it.
 3. **TPA `correctAnswer` ambiguity** — extracted docs sometimes have empty `correctAnswer` and `subQuestions`; the manual editor must enforce both (a `[colA_rowIdx, colB_rowIdx]` pair).
 4. **MSR `msrSources` and `subQuestions` are commonly empty** — extraction reliability is the main blocker; manual editor will become the canonical entry path.

@@ -87,17 +87,8 @@ The Navbar is hidden on `/quiz`, `/gmat-focus-quiz`, and `/di-quiz` to maximise 
 - `TPAQuestionCard.tsx` — DI-TPA (2-column radio table).
 - All DI cards live in the same `components/` folder; styles in `styles/question-cards.css`.
 
-### 12. Extraction Scripts (developer-only)
-- `backend/src/scripts/di_extraction/` — Puppeteer scrapers + Python parsers + GPT formatter for DI questions from GMAT Club.
-- `backend/src/scripts/v3_extraction/` — Generic v3 pipeline (RC, Quant), Python.
-- `backend/src/scripts/extractWithPuppeteer*.ts` — older legacy scrapers.
-- `backend/src/scripts/validate*.ts` — GPT validation passes.
-- `backend/src/scripts/fixIncompleteOptions.ts` — option completion via LLM.
-
-(Status of each extractor → `QUESTION_SOURCING.md`.)
-
-### 13. Misc backend
-- `services/openaiService.ts` — wrapper for LLM calls used by extraction/validation.
+### 12. Misc backend
+- `services/openaiService.ts` — wrapper for LLM calls.
 - `services/pdfProcessor.ts` — PDF parsing (legacy ingestion route).
 - `pdfImporter.ts` — top-level PDF import script.
 

@@ -17,7 +17,7 @@ The product is **practice-focused, not concept-teaching**: it's designed to comp
 | DB | MongoDB (Mongoose models) | Local or Atlas; backup zip in repo root. |
 | Auth | JWT (access + refresh) | `bcryptjs` for password hashing. Tokens currently in localStorage (security TODO). |
 | Payments | Razorpay (Checkout v1) | INR; manual + automated flows; webhook not yet wired. |
-| Analytics | Mixpanel (frontend) | Two services exist; consolidation pending (see `PROJECT_PLAN_2026.md`). |
+| Analytics | Mixpanel (frontend) | Two services exist; consolidation pending. |
 | Scraping | Puppeteer + `puppeteer-extra-plugin-stealth` | Used for question extraction from GMAT Club. |
 | LLM | OpenAI SDK (currently); Claude planned | Used for question cleanup/explanation generation. Python helpers under `backend/src/scripts/v3_extraction/`. |
 | Build/Run | `npm run dev` (backend), `npm start` (frontend) | Backend default port `5006`, frontend `3000`. |
@@ -25,13 +25,11 @@ The product is **practice-focused, not concept-teaching**: it's designed to comp
 ## Repo layout
 
 ```
-gmat-quiz-2-main/
-├── README.md                       # Bare-bones setup
-├── GMAT_FOCUS_FEATURES.md          # Notes on the Focus Edition impl
-├── PROJECT_PLAN_2026.md            # Long-form roadmap (lint, payments, security, analytics)
-├── DI Question Extraction strategy v2.md  # Most recent DI extraction analysis
-├── DS extractions.md               # DI scraping plan
-├── context/                        # ← this directory (AI onboarding)
+gmat-saas-platform/
+├── README.md                       # Setup & overview
+├── CLAUDE.md                       # Dev agent guide
+├── LICENSE                         # MIT
+├── context/                        # ← this directory (architecture reference)
 ├── backend/
 │   ├── src/
 │   │   ├── index.ts                # Express bootstrap
@@ -107,5 +105,5 @@ Frontend `.env`: `REACT_APP_API_URL=http://localhost:5006/api`, `REACT_APP_MIXPA
 - Quiz core, GMAT Focus mock, Razorpay one-time payments, JWT auth, admin panel: **functional**.
 - Webhooks, refunds, subscription expiry job, email notifications: **not yet implemented**.
 - Question bank quality issues: ~254 truncated options, mixed answer formats, missing explanations.
-- DI extraction (G&T / MSR / TPA): partially working — see `QUESTION_SOURCING.md` and the in-progress DI Question Editor (manual entry tool).
-- Lint / strict TS / console removal: tracked in `PROJECT_PLAN_2026.md`.
+- DI extraction (G&T / MSR / TPA): partially working; manual editor is the canonical path for new DI content.
+- Lint / strict TS / console removal: tracked internally.
